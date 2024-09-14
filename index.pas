@@ -1,14 +1,19 @@
-
-var
-nama : string;
-nim : longint;
+﻿program latihan;
+uses crt;
 
 begin
-    write('Masukkan nama : ');
-    readln(nama);
-    write('Masukkan nim : ');
-    readln(nim);
-    
-
-    write('Halo nama saya ', nama, ' dengan nim ', nim);
+    clrscr;
+    writeln('Nama-nama Bulan :');
+    writeln('Januari');
+    writeln('Februari');
+    writeln('Maret');
+    writeln('April');
+    writeln('Mei');
+    writeln('Juni');
+    writeln('Juli');
+    writeln('Agustus');
+    writeln('September');
+    writeln('Oktober');
+    writeln('November');
+    writeln('Desember');
 end.

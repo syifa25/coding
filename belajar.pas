@@ -1,7 +1,15 @@
-program belajar;
-uses crt;
-
+﻿program Biodata;
+var
+nama, alamat, hobi: string;
+umur: integer;
 begin
-    clrscr;
-    writeln('Belajar Pascal untuk Dasar Pemrograman');
-end.        
+nama := 'Siti Nur Salsabila';
+umur := 17;
+alamat := 'Medan, Sumatera Utara';
+hobi := 'Membaca dan Coding';
+writeln('--- Biodata ---');
+writeln('Nama : ', nama);
+writeln('Umur : ', umur);
+writeln('Alamat : ', alamat);
+writeln('Hobi : ', hobi);
+end.
