@@ -1,26 +1,20 @@
-﻿program nilai;
+﻿program lapangan;
 uses crt;
 
-var
-nama : string;
-nilai_aktif, nilai_tugas, nilai_ujian, nilai_murni_keaktifan, nilai_murni_tugas, nilai_murni_ujian, nilai_akhir : real;
+var 
+panjang, lebar, luas, keliling : integer;
 
 begin
-clrscr;
-    write ('Nama Mahasiswa   : ');
-    readln(nama);
-    write ('Nilai Keaktifan  : ');
-    readln(nilai_aktif);
-    write ('Nilai Tugas      : ');
-    readln(nilai_tugas);
-    write ('Nilai Ujian      : ');
-    readln(nilai_ujian);
+    clrscr;
+    writeln('---Menghitung Luas dan Keliling Lapangan Sepak Bola---');
+    write('Panjang  : ');
+    readln(panjang);
+    write('Lebar    : ');
+    readln(lebar);
+    writeln('--Luas dan Keliling Lapangan Sepak Bola--');
+    luas := panjang * lebar;
+    keliling := 2 * (panjang + lebar);
+    writeln('Luas       : ', luas, ' Meter');
+    writeln('Keliling   : ', keliling, ' Meter');
 
-    nilai_murni_keaktifan := nilai_aktif * 20/100;
-    nilai_murni_tugas := nilai_tugas * 35/100;
-    nilai_murni_ujian  := nilai_ujian * 45/100;
-    nilai_akhir := nilai_murni_keaktifan + nilai_murni_tugas + nilai_murni_ujian;
-
-    writeln ('----Nilai Akhir Mahasiswa----');
-    write('Nilai Akhir : ', nilai_akhir:0:2);
 end.
