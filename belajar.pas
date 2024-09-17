@@ -1,23 +1,24 @@
-﻿program a;
+﻿program tugas_2;
 uses crt;
 
-var 
+var
 nama : string;
-kom : char;
-tinggi : real;
-umur : integer;
+gaji_pokok, gaji_total : longint;
+lembur, tidak_bekerja : integer;
 
 begin
     clrscr;
-    nama := 'Umri Marsyifa';
-    kom := 'B';
-    tinggi := 149;
-    umur := 18;
+    write('Nama Karyawan         : ');
+    readln(nama);
+    write('Gaji Pokok            : ');
+    readln(gaji_pokok);
+    write('Lembur (hari)         : ');
+    readln(lembur);
+    write('Tidak Bekerja (hari)  : ');
+    readln(tidak_bekerja);
 
-    writeln('nama : ' , nama );
-    writeln('kom : ' , kom );
-    writeln('tinggi : ' , tinggi:0:0 );
-    writeln('umur : ' , umur );
-    writeln(not 4);
-    writeln(not -4);
+    gaji_total := gaji_pokok + (150000 * lembur) - (30000 * tidak_bekerja);
+    writeln('------Gaji------');
+    write('Gaji total : Rp ', gaji_total);
+
 end.
