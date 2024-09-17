@@ -1,24 +1,26 @@
-﻿program tugas_2;
+﻿program nilai;
 uses crt;
 
 var
 nama : string;
-gaji_pokok, gaji_total : longint;
-lembur, tidak_bekerja : integer;
+nilai_aktif, nilai_tugas, nilai_ujian, nilai_m_keaktifan, nilai_m_tugas, nilai_m_ujian, nilai_akhir : real;
 
 begin
-    clrscr;
-    write('Nama Karyawan         : ');
+clrscr;
+    write ('Nama Mahasiswa   : ');
     readln(nama);
-    write('Gaji Pokok            : ');
-    readln(gaji_pokok);
-    write('Lembur (hari)         : ');
-    readln(lembur);
-    write('Tidak Bekerja (hari)  : ');
-    readln(tidak_bekerja);
+    write ('Nilai Keaktifan  : ');
+    readln(nilai_aktif);
+    write ('Nilai Tugas      : ');
+    readln(nilai_tugas);
+    write ('Nilai Ujian      : ');
+    readln(nilai_ujian);
 
-    gaji_total := gaji_pokok + (150000 * lembur) - (30000 * tidak_bekerja);
-    writeln('------Gaji------');
-    write('Gaji total : Rp ', gaji_total);
+    nilai_m_keaktifan := nilai_aktif * 20/100;
+    nilai_m_tugas := nilai_tugas * 35/100;
+    nilai_m_ujian  := nilai_ujian * 45/100;
+    nilai_akhir := nilai_m_keaktifan + nilai_m_tugas + nilai_m_ujian;
 
+    writeln ('----Nilai Akhir Mahasiswa----');
+    write('Nilai Akhir : ', nilai_akhir:0:2);
 end.
