@@ -1,15 +1,23 @@
-﻿program Biodata;
-var
-nama, alamat, hobi: string;
-umur: integer;
+﻿program a;
+uses crt;
+
+var 
+nama : string;
+kom : char;
+tinggi : real;
+umur : integer;
+
 begin
-nama := 'Siti Nur Salsabila';
-umur := 17;
-alamat := 'Medan, Sumatera Utara';
-hobi := 'Membaca dan Coding';
-writeln('--- Biodata ---');
-writeln('Nama : ', nama);
-writeln('Umur : ', umur);
-writeln('Alamat : ', alamat);
-writeln('Hobi : ', hobi);
+    clrscr;
+    nama := 'Umri Marsyifa';
+    kom := 'B';
+    tinggi := 149;
+    umur := 18;
+
+    writeln('nama : ' , nama );
+    writeln('kom : ' , kom );
+    writeln('tinggi : ' , tinggi:0:0 );
+    writeln('umur : ' , umur );
+    writeln(not 4);
+    writeln(not -4);
 end.
