@@ -1,4 +1,4 @@
-﻿program lapangan;
+program lapangan;
 uses crt;
 
 var 
