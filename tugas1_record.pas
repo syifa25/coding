@@ -10,7 +10,6 @@ type
         nama, alamat, tempat_lahir : string;
         nim : string [9];
         noHP : string [12];
-        jenis_kelamin : char; 
         tanggal_lahir : date;
     end;
 
@@ -31,24 +30,15 @@ clrscr;
                 writeln('Data Mahasiswa ke-', i);
                 with data [i]
                 do begin
-                    write('Nama                 : ');
+                    write('Nama         : ');
                     readln(nama);
-                    repeat
-                        write('Jenis Kelamin(P/L)   : ');
-                        readln(jenis_kelamin);
-                        jenis_kelamin := UpCase(jenis_kelamin); 
-
-                        if (jenis_kelamin <> 'L') and (jenis_kelamin <> 'P') then
-                            writeln('Input tidak valid! Masukkan "L" untuk Laki-laki atau "P" untuk Perempuan.');
-                    until (jenis_kelamin = 'L') or (jenis_kelamin = 'P');
-
-                    write('Nim                  : ');
+                    write('Nim          : ');
                     readln(nim);
-                    write('Alamat               : ');
+                    write('Alamat       : ');
                     readln(alamat);
-                    write('No Hp                : ');
+                    write('No Hp        : ');
                     readln(noHP);
-                    write('Tempat Lahir         : ');
+                    write('Tempat Lahir : ');
                     readln(tempat_lahir);
 
                     with tanggal_lahir do begin
@@ -65,11 +55,12 @@ clrscr;
         end;
 
         writeln('--------------------------------------');
-        writeln('Data Mahasiswa dan kelas yang ditentukan :');
+        writeln('Data Mahasiswa :');
         writeln;
 
         for i := 1 to jumlah do
         begin
+            writeln('Mahasiswa ke-',i);
             with data [i] do begin 
                 writeln('Nama             : ',nama);
                 writeln('Nim              : ',nim);
@@ -80,14 +71,9 @@ clrscr;
                 with tanggal_lahir do begin 
                     writeln('Tanggal lahir    : ',tanggal,'/',bulan,'/',tahun);
                 end;
-                if jenis_kelamin = 'P' then
-                    writeln('Masuk ke kelas A dengan narahubung Kak Khoirika')
-                else
-                    writeln('Masuk ke kelas B dengan narahubung Bang Ahmad');
             end;
             writeln('-------------------------------------------------');
         writeln;
     end;
-    writeln('Silakan hubungi narahubung masing masing kelas agar dapat dimasukkan ke dalam grup whatsapp');
     readln;
 end.
